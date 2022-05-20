@@ -24,14 +24,13 @@ source-repository head
   location: https://github.com/residenti/randamLaunch
 
 library
-  exposed-modules:
-      Lib
   other-modules:
       Paths_randamLaunch
   hs-source-dirs:
       src
   build-depends:
       base >=4.7 && <5
+    , random
   default-language: Haskell2010
 
 executable randamLaunch-exe
@@ -44,6 +43,7 @@ executable randamLaunch-exe
   build-depends:
       base >=4.7 && <5
     , randamLaunch
+    , random
   default-language: Haskell2010
 
 test-suite randamLaunch-test
@@ -57,4 +57,5 @@ test-suite randamLaunch-test
   build-depends:
       base >=4.7 && <5
     , randamLaunch
+    , random
   default-language: Haskell2010
