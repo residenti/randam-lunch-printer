@@ -22,6 +22,8 @@ description:         Please see the README on GitHub at <https://github.com/resi
 dependencies:
 - base >= 4.7 && < 5
 - random
+- scalpel
+- text
 
 library:
   source-dirs: src
@@ -36,6 +38,10 @@ executables:
     - -with-rtsopts=-N
     dependencies:
     - randamLaunch
+    # https://github.com/commercialhaskell/stack/issues/5439
+    when:
+    - condition: false
+      other-modules: Paths_randamLaunch
 
 tests:
   randamLaunch-test:

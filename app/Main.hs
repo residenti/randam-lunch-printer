@@ -1,16 +1,16 @@
+{-# LANGUAGE OverloadedStrings #-}
+
 module Main where
 
 import System.Random
-
-categories :: [Char]
-categories = ['和', '洋', '中']
-
-categoriesLength :: Int
-categoriesLength = length categories
+import Data.Text.IO as TIO
+import LaunchCategoryScraper
 
 main :: IO ()
 main = do
+  maybeCategories <- launchCategories -- TODO 都度スクレイピングするの止める
+  let categories = maybe [] id maybeCategories
+  let categoriesLength = length categories
   index <- randomRIO (0, (categoriesLength - 1))
   let category = (categories !! index)
-  putChar category
-  putStrLn "" -- TODO: 改行のために実装しているが消したい
+  TIO.putStrLn category -- FIXME: 文字化け
