@@ -4,11 +4,11 @@ module Main where
 
 import System.Random
 import Data.Text.IO as TIO
-import LaunchCategoryScraper
+import LunchCategoryScraper
 
 main :: IO ()
 main = do
-  maybeCategories <- launchCategories -- TODO 都度スクレイピングするの止める
+  maybeCategories <- lunchCategories -- TODO 都度スクレイピングするの止める
   let categories = maybe [] id maybeCategories
   let categoriesLength = length categories
   index <- randomRIO (0, (categoriesLength - 1))
