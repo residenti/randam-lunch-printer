@@ -4,16 +4,16 @@ module LunchCategoryScraper
   ( lunchCategories
   ) where
 
-import Text.HTML.Scalpel
+import qualified Text.HTML.Scalpel as HS
 import qualified Data.Text as T
 
 lunchCategories :: IO (Maybe [T.Text])
-lunchCategories = scrapeURL "https://retty.me/category/" lunchCategories
+lunchCategories = HS.scrapeURL "https://retty.me/category/" lunchCategories
   where
-    lunchCategories :: Scraper T.Text [T.Text]
-    lunchCategories = chroots ("td" // "a") lunchCategory
-    lunchCategory :: Scraper T.Text T.Text
+    lunchCategories :: HS.Scraper T.Text [T.Text]
+    lunchCategories = HS.chroots ("td" HS.// "a") lunchCategory
+    lunchCategory :: HS.Scraper T.Text T.Text
     -- TODO: ここ何してるか調べる
     lunchCategory = do
-      lunchCategoryText <- text $ "a"
+      lunchCategoryText <- HS.text $ "a"
       return $ lunchCategoryText

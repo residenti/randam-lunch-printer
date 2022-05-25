@@ -2,15 +2,15 @@
 
 module Main where
 
-import System.Random
-import Data.Text.IO as TIO
-import LunchCategoryScraper
+import qualified System.Random as R
+import qualified Data.Text.IO as TIO
+import qualified LunchCategoryScraper as LCS
 
 main :: IO ()
 main = do
-  maybeCategories <- lunchCategories -- TODO 都度スクレイピングするの止める
+  maybeCategories <- LCS.lunchCategories -- TODO 都度スクレイピングするの止める
   let categories = maybe [] id maybeCategories
   let categoriesLength = length categories
-  index <- randomRIO (0, (categoriesLength - 1))
+  index <- R.randomRIO (0, (categoriesLength - 1))
   let category = (categories !! index)
   TIO.putStrLn category -- FIXME: 文字化け
