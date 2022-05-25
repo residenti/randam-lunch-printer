@@ -3,7 +3,7 @@
 module Main where
 
 import qualified System.Random as R
-import qualified Data.Text.IO as TIO
+import qualified Codec.Binary.UTF8.String as U8Str
 import qualified LunchCategoryScraper as LCS
 
 main :: IO ()
@@ -13,4 +13,4 @@ main = do
   let categoriesLength = length categories
   index <- R.randomRIO (0, (categoriesLength - 1))
   let category = (categories !! index)
-  TIO.putStrLn category -- FIXME: 文字化け
+  putStrLn $ U8Str.decodeString category

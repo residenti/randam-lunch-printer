@@ -35,6 +35,7 @@ library
     , random
     , scalpel
     , text
+    , utf8-string
   default-language: Haskell2010
 
 executable randam-lunch-printer-exe
@@ -50,6 +51,7 @@ executable randam-lunch-printer-exe
     , random
     , scalpel
     , text
+    , utf8-string
   default-language: Haskell2010
 
 test-suite randam-lunch-printer-test
@@ -66,4 +68,5 @@ test-suite randam-lunch-printer-test
     , random
     , scalpel
     , text
+    , utf8-string
   default-language: Haskell2010
