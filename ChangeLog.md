@@ -1,3 +1,3 @@
-# Changelog for randamLaunch
+# Changelog for randam-lunch-printer
 
 ## Unreleased changes

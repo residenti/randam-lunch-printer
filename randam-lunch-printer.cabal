@@ -4,11 +4,11 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 
-name:           randamLaunch
+name:           randam-lunch-printer
 version:        0.1.0.0
-description:    Please see the README on GitHub at <https://github.com/residenti/randamLaunch#readme>
-homepage:       https://github.com/residenti/randamLaunch#readme
-bug-reports:    https://github.com/residenti/randamLaunch/issues
+description:    Please see the README on GitHub at <https://github.com/residenti/randam-lunch-printer#readme>
+homepage:       https://github.com/residenti/randam-lunch-printer#readme
+bug-reports:    https://github.com/residenti/randam-lunch-printer/issues
 author:         residenti
 maintainer:     n.queue.r@gmail.com
 copyright:      Copyright (c) 2022 residenti
@@ -21,13 +21,13 @@ extra-source-files:
 
 source-repository head
   type: git
-  location: https://github.com/residenti/randamLaunch
+  location: https://github.com/residenti/randam-lunch-printer
 
 library
   exposed-modules:
       LaunchCategoryScraper
   other-modules:
-      Paths_randamLaunch
+      Paths_randam_lunch_printer
   hs-source-dirs:
       src
   build-depends:
@@ -37,30 +37,32 @@ library
     , text
   default-language: Haskell2010
 
-executable randamLaunch-exe
+executable randam-lunch-printer-exe
   main-is: Main.hs
+  other-modules:
+      Paths_randam_lunch_printer
   hs-source-dirs:
       app
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
-    , randamLaunch
+    , randam-lunch-printer
     , random
     , scalpel
     , text
   default-language: Haskell2010
 
-test-suite randamLaunch-test
+test-suite randam-lunch-printer-test
   type: exitcode-stdio-1.0
   main-is: Spec.hs
   other-modules:
-      Paths_randamLaunch
+      Paths_randam_lunch_printer
   hs-source-dirs:
       test
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
-    , randamLaunch
+    , randam-lunch-printer
     , random
     , scalpel
     , text
