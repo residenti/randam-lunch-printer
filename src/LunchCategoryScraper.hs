@@ -14,5 +14,5 @@ lunchCategories = HS.scrapeURL "https://retty.me/category/" lunchCategories
     lunchCategory :: HS.Scraper String String
     -- TODO: ここ何してるか調べる
     lunchCategory = do
-      lunchCategoryText <- HS.text $ "a"
-      return $ lunchCategoryText
+      lunchCategoryText <- HS.text "a"
+      return lunchCategoryText
