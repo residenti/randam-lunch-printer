@@ -23,7 +23,6 @@ dependencies:
 - base >= 4.7 && < 5
 - random
 - scalpel
-- text
 - utf8-string
 
 default-extensions:
