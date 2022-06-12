@@ -5,6 +5,7 @@ import qualified System.Random as R
 import qualified Codec.Binary.UTF8.String as U8Str
 import qualified LunchCategoryScraper as LCS
 
+-- NOTE: Referring to https://hackage.haskell.org/package/base-4.16.1.0/docs/src/Data-OldList.html#words
 wordsWhen :: (Char -> Bool) -> String -> [String]
 wordsWhen p s =  case dropWhile p s of
                       "" -> []
