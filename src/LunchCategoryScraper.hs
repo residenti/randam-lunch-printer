@@ -1,5 +1,3 @@
-{-# LANGUAGE OverloadedStrings #-}
-
 module LunchCategoryScraper
   ( lunchCategories
   ) where

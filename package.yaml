@@ -26,6 +26,9 @@ dependencies:
 - text
 - utf8-string
 
+default-extensions:
+  OverloadedStrings
+
 library:
   source-dirs: src
 

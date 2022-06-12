@@ -30,6 +30,8 @@ library
       Paths_randam_lunch_printer
   hs-source-dirs:
       src
+  default-extensions:
+      OverloadedStrings
   build-depends:
       base >=4.7 && <5
     , random
@@ -44,6 +46,8 @@ executable randam-lunch-printer-exe
       Paths_randam_lunch_printer
   hs-source-dirs:
       app
+  default-extensions:
+      OverloadedStrings
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
@@ -61,6 +65,8 @@ test-suite randam-lunch-printer-test
       Paths_randam_lunch_printer
   hs-source-dirs:
       test
+  default-extensions:
+      OverloadedStrings
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
