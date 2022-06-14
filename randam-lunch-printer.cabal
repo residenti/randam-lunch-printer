@@ -39,7 +39,7 @@ library
     , utf8-string
   default-language: Haskell2010
 
-executable randam-lunch-printer-exe
+executable lunch
   main-is: Main.hs
   other-modules:
       Paths_randam_lunch_printer
