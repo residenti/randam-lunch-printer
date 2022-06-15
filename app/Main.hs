@@ -28,4 +28,4 @@ main = do
       let categoriesLength = length categories
       index <- R.randomRIO (0, (categoriesLength - 1))
       let category = (categories !! index)
-      putStrLn category
+      putStrLn $  "イタダキマ～ス♪(●人´∀｀) ＼" ++ category ++ "／"

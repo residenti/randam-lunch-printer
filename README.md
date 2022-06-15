@@ -11,7 +11,7 @@
 To decide what to eat for lunch, Just execute `lunch` comand!!!
 ```
 % lunch
-ステーキ
+イタダキマ～ス♪(●人´∀｀) ＼ステーキ／
 ```
 
 `--u` option is to update Lunch Category List.
