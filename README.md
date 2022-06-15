@@ -8,7 +8,17 @@
 ```
 
 ## Usage
-Just execute `lunch`!!
+To decide what to eat for lunch, Just execute `lunch` comand!!!
 ```
 % lunch
+ステーキ
+```
+
+`--u` option is to update Lunch Category List.
+
+*`lunch` command randomly prints Lunch Category from this "Lunch Category List".
+```
+% lunch --u
+Start updating Lunch Categories List...
+Completed!!
 ```
