@@ -23,7 +23,7 @@ main = do
   if length args > 0 && head args == "--setup"
     then do
       putStrLn "Start creating Lunch Category List..."
-      maybeCategories <- LCS.lunchCategories
+      maybeCategories <- LCS.lunchCategories -- NOTE: もはやcategories.csvを準備しといて、それをコピーすればスクレイピングの必要ない気が。。。
       let categories = maybe [] id maybeCategories
       writeFile filePath $ U8Str.decodeString $ L.intercalate "," categories
       putStrLn "Completed!!"
