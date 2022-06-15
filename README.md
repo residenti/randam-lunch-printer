@@ -7,10 +7,7 @@ Install `lunch` command.
 % cd randam-lunch-printer
 % stack install
 ```
-Prepare "Lunch Category List".
-
-(`lunch` command randomly prints Lunch Category from this "Lunch Category List")
-
+Prepare "Lunch Category List" (`lunch` command randomly prints Lunch Category from this "Lunch Category List").  
 Execute the following command to create "Lunch Category List"!
 ```
 % lunch --setup
