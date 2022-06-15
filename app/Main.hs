@@ -2,6 +2,7 @@ module Main where
 
 import qualified Data.List as L
 import qualified System.Environment as E
+import qualified System.Directory as D
 import qualified System.Random as R
 import qualified Codec.Binary.UTF8.String as U8Str
 import qualified LunchCategoryScraper as LCS
@@ -15,15 +16,19 @@ wordsWhen p s =  case dropWhile p s of
 main :: IO ()
 main = do
   args <- E.getArgs
-  if length args > 0 && head args == "--u"
+  homePath <- D.getHomeDirectory
+  -- TODO: $HOEM/.lunch/ 的なディレクトリ作成してその下にcategories.csvを配置する
+  let filePath = homePath ++ "/" ++ "categories.csv"
+
+  if length args > 0 && head args == "--setup"
     then do
-      putStrLn "Start updating Lunch Categories List..."
+      putStrLn "Start creating Lunch Category List..."
       maybeCategories <- LCS.lunchCategories
       let categories = maybe [] id maybeCategories
-      writeFile "categories.csv" $ U8Str.decodeString $ L.intercalate "," categories
+      writeFile filePath $ U8Str.decodeString $ L.intercalate "," categories
       putStrLn "Completed!!"
     else do
-      categoriesString <- readFile "categories.csv"
+      categoriesString <- readFile filePath
       let categories = wordsWhen (==',') categoriesString
       let categoriesLength = length categories
       index <- R.randomRIO (0, (categoriesLength - 1))

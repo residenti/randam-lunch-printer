@@ -24,6 +24,7 @@ dependencies:
 - random
 - scalpel
 - utf8-string
+- directory
 
 default-extensions:
   OverloadedStrings
