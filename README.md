@@ -19,8 +19,8 @@ Download [the release binary](https://github.com/residenti/randam-lunch-printer/
 Set the PATH environment variable.
 
 ## Setup
-Prepare "Lunch Category List" (`lunch` command randomly prints Lunch Category from this "Lunch Category List").  
-Execute the following command to create "Lunch Category List"!
+create "Lunch Category List".  
+`lunch` command randomly prints Lunch Category from this "Lunch Category List".
 ```
 % lunch --setup
 ```
