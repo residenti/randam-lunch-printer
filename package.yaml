@@ -1,7 +1,7 @@
 name:                randam-lunch-printer
 version:             0.0.0
 github:              "residenti/randam-lunch-printer"
-license:             BSD3
+license:             MIT
 author:              "residenti"
 maintainer:          "n.queue.r@gmail.com"
 copyright:           "Copyright (c) 2022 residenti"
