@@ -15,12 +15,14 @@ wordsWhen p s =  case dropWhile p s of
                             where (w, s'') = break p s'
 main :: IO ()
 main = do
-  args <- E.getArgs
   homePath <- D.getHomeDirectory
   let configDirPath = homePath ++ "/" ++ ".lunch"
   let categoryListPath = configDirPath ++ "/" ++ "categories.csv"
 
-  if length args > 0 && head args == "--setup"
+  args <- E.getArgs
+  let hasSetupOption = length args > 0 && head args == "--setup"
+
+  if hasSetupOption
     then do
       putStrLn "Start creating Lunch Category List..."
       maybeCategories <- LCS.lunchCategories -- NOTE: もはやcategories.csvを準備しといて、それをコピーすればスクレイピングの必要ない気が。。。
