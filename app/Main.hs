@@ -17,18 +17,19 @@ main :: IO ()
 main = do
   args <- E.getArgs
   homePath <- D.getHomeDirectory
-  -- TODO: $HOEM/.lunch/ 的なディレクトリ作成してその下にcategories.csvを配置する
-  let filePath = homePath ++ "/" ++ "categories.csv"
+  let configDirPath = homePath ++ "/" ++ ".lunch"
+  let categoryListPath = configDirPath ++ "/" ++ "categories.csv"
 
   if length args > 0 && head args == "--setup"
     then do
       putStrLn "Start creating Lunch Category List..."
       maybeCategories <- LCS.lunchCategories -- NOTE: もはやcategories.csvを準備しといて、それをコピーすればスクレイピングの必要ない気が。。。
       let categories = maybe [] id maybeCategories
-      writeFile filePath $ U8Str.decodeString $ L.intercalate "," categories
+      D.createDirectoryIfMissing False configDirPath
+      writeFile categoryListPath $ U8Str.decodeString $ L.intercalate "," categories
       putStrLn "Completed!!"
     else do
-      categoriesString <- readFile filePath
+      categoriesString <- readFile categoryListPath
       let categories = wordsWhen (==',') categoriesString
       let categoriesLength = length categories
       index <- R.randomRIO (0, (categoriesLength - 1))
