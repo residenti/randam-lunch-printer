@@ -25,7 +25,7 @@ source-repository head
 
 library
   exposed-modules:
-      LunchCategoryScraper
+      RandamLunchPrinter
   other-modules:
       Paths_randam_lunch_printer
   hs-source-dirs:
