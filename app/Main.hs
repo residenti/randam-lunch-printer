@@ -1,10 +1,8 @@
 module Main where
 
 
-import qualified Data.List as L
 import qualified System.Directory as D
 import qualified System.Random as R
-import qualified Codec.Binary.UTF8.String as U8Str
 import qualified RandamLunchPrinter as RLP
 
 
@@ -15,11 +13,9 @@ main = do
 
   if not hasCategoryList then do
     putStrLn "Start creating Lunch Category List..."
-    maybeCategories <- RLP.lunchCategories -- NOTE: もはやcategories.csvを準備しといて、それをコピーすればスクレイピングの必要ない気が。。。
-    let categories = maybe [] id maybeCategories
     configDirPath <- RLP.prepareConfigDirPath
     D.createDirectoryIfMissing False configDirPath
-    writeFile categoryListPath $ U8Str.decodeString $ L.intercalate "," categories
+    D.copyFile "categories.csv" categoryListPath
     putStrLn "Completed!!"
   else return()
 

@@ -22,8 +22,6 @@ description:         Please see the README on GitHub at <https://github.com/resi
 dependencies:
 - base >= 4.7 && < 5
 - random
-- scalpel
-- utf8-string
 - directory
 
 default-extensions:
