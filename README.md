@@ -18,17 +18,11 @@ brew install residenti/lunch/lunch
 Download [the release binary](https://github.com/residenti/randam-lunch-printer/releases) for your system.
 Set the PATH environment variable.
 
-## Setup
-create "Lunch Category List".  
-`lunch` command randomly prints Lunch Category from this "Lunch Category List".
-```
-% lunch --setup
-```
-"Lunch Category List" is just `$HOME/categories.csv`. So it is possible to prepare on your own.
-
 ## Usage
 To decide what to eat for lunch, Just execute `lunch` comand!!!
 ```
 % lunch
 イタダキマ～ス♪(●人´∀｀) ＼ステーキ／
 ```
+`lunch` command randomly prints Lunch Category from "Lunch Category List".  
+This "Lunch Category List" is just `$HOME/categories.csv`. So it is possible to prepare on your own and be customized.
