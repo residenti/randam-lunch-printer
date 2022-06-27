@@ -18,7 +18,9 @@ latLon args = RLP.LatLon { RLP.latitude = lat, RLP.longitude = lon  }
     lat = args !! 1
     lon = args !! 2
 
--- TODO 緯度経度を設定ファイルから読み取るようにする
+-- TODO:
+-- ・緯度経度を設定ファイルから読み取るようにする
+-- ・検索範囲を指定できるようにする
 main :: IO ()
 main = do
   args <- E.getArgs
