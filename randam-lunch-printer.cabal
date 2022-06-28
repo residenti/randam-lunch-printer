@@ -31,11 +31,15 @@ library
   hs-source-dirs:
       src
   default-extensions:
-      OverloadedStrings
+      OverloadedStrings , DeriveGeneric
   build-depends:
-      base >=4.7 && <5
+      aeson
+    , base >=4.7 && <5
+    , bytestring
     , directory
+    , http-conduit
     , random
+    , unix
   default-language: Haskell2010
 
 executable lunch
@@ -45,13 +49,17 @@ executable lunch
   hs-source-dirs:
       app
   default-extensions:
-      OverloadedStrings
+      OverloadedStrings , DeriveGeneric
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      base >=4.7 && <5
+      aeson
+    , base >=4.7 && <5
+    , bytestring
     , directory
+    , http-conduit
     , randam-lunch-printer
     , random
+    , unix
   default-language: Haskell2010
 
 test-suite randam-lunch-printer-test
@@ -62,11 +70,15 @@ test-suite randam-lunch-printer-test
   hs-source-dirs:
       test
   default-extensions:
-      OverloadedStrings
+      OverloadedStrings , DeriveGeneric
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      base >=4.7 && <5
+      aeson
+    , base >=4.7 && <5
+    , bytestring
     , directory
+    , http-conduit
     , randam-lunch-printer
     , random
+    , unix
   default-language: Haskell2010
