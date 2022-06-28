@@ -1,11 +1,6 @@
 # randam-lunch-printer
 
 ## Installation
-### Using Homebrew (Linux, macOS)
-If you’re using Homebrew or Linuxbrew, install the lunch formula:
-```
-brew install residenti/lunch/lunch
-```
 
 ### Using Git
 ```
@@ -14,7 +9,7 @@ brew install residenti/lunch/lunch
 % stack install
 ```
 
-### From binaries (Linux, macOS, Windows)
+### From binaries
 Download [the release binary](https://github.com/residenti/randam-lunch-printer/releases) for your system.
 Set the PATH environment variable.
 
