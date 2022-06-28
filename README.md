@@ -9,10 +9,6 @@
 % stack install
 ```
 
-### From binaries
-Download [the release binary](https://github.com/residenti/randam-lunch-printer/releases) for your system.
-Set the PATH environment variable.
-
 ## Usage
 
 ### 1. Put Lunch Category
