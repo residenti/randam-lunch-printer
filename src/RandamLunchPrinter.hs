@@ -54,9 +54,8 @@ putShopName latLon = do
   else putStrLn "request failed with error (￣_￣|||)"
 
 
--- TODO: host値入れる
 host :: BC.ByteString
-host = "<host>"
+host = "gan8uu1jr7.execute-api.us-east-1.amazonaws.com"
 
 apiPath :: BC.ByteString
 apiPath = "/production/shops"
