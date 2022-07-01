@@ -13,10 +13,10 @@ import qualified Network.HTTP.Simple as HS
 import qualified System.Random as R
 
 
-data Shop = Shop { name :: String } deriving (Show, G.Generic)
+data Shop = Shop { name :: String } deriving (G.Generic)
 instance A.FromJSON Shop
 
-data Shops = Shops  { shops :: [Shop] } deriving (Show, G.Generic)
+data Shops = Shops  { shops :: [Shop] } deriving (G.Generic)
 instance A.FromJSON Shops
 
 data LatLon = LatLon { latitude :: BC.ByteString
