@@ -10,7 +10,11 @@ import qualified Network.HTTP.Simple as HS
 import qualified Data.ByteString.Char8 as BC
 
 hasShopOption :: [BC.ByteString] -> Bool
-hasShopOption args = length args > 0 && head args == "--s"
+hasShopOption args = argsLength > 0 && option == shopOption
+  where
+    argsLength = length args
+    option = head args
+    shopOption = BC.pack "--s"
 
 latLon :: [BC.ByteString] -> RLP.LatLon
 latLon args = RLP.LatLon { RLP.latitude = lat, RLP.longitude = lon  }
